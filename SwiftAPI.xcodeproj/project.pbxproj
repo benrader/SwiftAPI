@@ -51,6 +51,11 @@
 		B27C2053288F411900D6C75F /* SwiftAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B27C2066288F436F00D6C75F /* Application */,
+				B27C2062288F434100D6C75F /* Networking */,
+				B27C2065288F436B00D6C75F /* Models */,
+				B27C2064288F436100D6C75F /* ViewModels */,
+				B27C2063288F435400D6C75F /* Views */,
 				B27C2054288F411900D6C75F /* SwiftAPIApp.swift */,
 				B27C2056288F411900D6C75F /* ContentView.swift */,
 				B27C2058288F411900D6C75F /* Assets.xcassets */,
@@ -65,6 +70,41 @@
 				B27C205B288F411900D6C75F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B27C2062288F434100D6C75F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B27C2063288F435400D6C75F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B27C2064288F436100D6C75F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B27C2065288F436B00D6C75F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B27C2066288F436F00D6C75F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
