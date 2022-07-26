@@ -6,6 +6,14 @@ public class APIClient {
     private let baseURL: URL
     private var headers: [HTTPHeader]
     
+    static let Teamwork = APIClient(baseURL: URL(string: "https://d.miltera.com")!,
+                                    headers: [
+                                        HTTPHeader.contentType(.json),
+                                        HTTPHeader.accept(.json),
+                                        HTTPHeader.authorization(username: "SECRET_PASSWORD", password: "")
+                                    ]
+    )
+    
     init(baseURL: URL,
                 configuration: URLSessionConfiguration = .default,
                 headers: [HTTPHeader] = HTTPHeader.defaultJSONHeaders
@@ -88,14 +96,6 @@ public class APIClient {
         return updatedURL
     }
 
-}
-
-extension APIClient {
-    
-    
-//    public func send<T: Decodable>(_ endpoint: EndpointType) async throws -> T {
-//
-//    }
 }
 
 enum FetchError: Error {

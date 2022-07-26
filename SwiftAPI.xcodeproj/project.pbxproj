@@ -17,6 +17,10 @@
 		B27C206E288F453800D6C75F /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C206D288F453800D6C75F /* HTTPHeader.swift */; };
 		B27C2070288F49E200D6C75F /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C206F288F49E200D6C75F /* EndpointType.swift */; };
 		B27C2074288F615B00D6C75F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C2073288F615B00D6C75F /* APIClient.swift */; };
+		B27C2076288F92DA00D6C75F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C2075288F92DA00D6C75F /* Company.swift */; };
+		B27C207A288F937F00D6C75F /* CompaniesTeamworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C2079288F937F00D6C75F /* CompaniesTeamworkResponse.swift */; };
+		B27C207C288F939C00D6C75F /* CompaniesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C207B288F939C00D6C75F /* CompaniesViewModel.swift */; };
+		B27C207E288F947D00D6C75F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C207D288F947D00D6C75F /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		B27C206D288F453800D6C75F /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		B27C206F288F49E200D6C75F /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		B27C2073288F615B00D6C75F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B27C2075288F92DA00D6C75F /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		B27C2079288F937F00D6C75F /* CompaniesTeamworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTeamworkResponse.swift; sourceTree = "<group>"; };
+		B27C207B288F939C00D6C75F /* CompaniesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewModel.swift; sourceTree = "<group>"; };
+		B27C207D288F947D00D6C75F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 				B27C2067288F43B300D6C75F /* HTTPMethod.swift */,
 				B27C2069288F441200D6C75F /* HTTPStatusCode.swift */,
 				B27C206B288F450600D6C75F /* HTTPParameters.swift */,
+				B27C207D288F947D00D6C75F /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -106,6 +115,7 @@
 		B27C2064288F436100D6C75F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B27C207B288F939C00D6C75F /* CompaniesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -113,6 +123,8 @@
 		B27C2065288F436B00D6C75F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B27C2075288F92DA00D6C75F /* Company.swift */,
+				B27C2079288F937F00D6C75F /* CompaniesTeamworkResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,11 +209,15 @@
 			files = (
 				B27C2070288F49E200D6C75F /* EndpointType.swift in Sources */,
 				B27C206E288F453800D6C75F /* HTTPHeader.swift in Sources */,
+				B27C2076288F92DA00D6C75F /* Company.swift in Sources */,
 				B27C206C288F450600D6C75F /* HTTPParameters.swift in Sources */,
+				B27C207A288F937F00D6C75F /* CompaniesTeamworkResponse.swift in Sources */,
 				B27C2074288F615B00D6C75F /* APIClient.swift in Sources */,
 				B27C2057288F411900D6C75F /* ContentView.swift in Sources */,
+				B27C207C288F939C00D6C75F /* CompaniesViewModel.swift in Sources */,
 				B27C2055288F411900D6C75F /* SwiftAPIApp.swift in Sources */,
 				B27C206A288F441200D6C75F /* HTTPStatusCode.swift in Sources */,
+				B27C207E288F947D00D6C75F /* Endpoint.swift in Sources */,
 				B27C2068288F43B300D6C75F /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
