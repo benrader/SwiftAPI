@@ -75,3 +75,14 @@ extension HTTPHeader {
         }
     }
 }
+
+// MARK: Default Headers
+extension HTTPHeader {
+    
+    public static var defaultJSONHeaders: [HTTPHeader] {
+        [
+            contentType(.json),
+            accept(.json)
+        ]
+    }
+}
