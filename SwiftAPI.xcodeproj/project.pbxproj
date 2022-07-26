@@ -85,12 +85,12 @@
 		B27C2062288F434100D6C75F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B27C2073288F615B00D6C75F /* APIClient.swift */,
+				B27C206F288F49E200D6C75F /* EndpointType.swift */,
 				B27C206D288F453800D6C75F /* HTTPHeader.swift */,
 				B27C2067288F43B300D6C75F /* HTTPMethod.swift */,
 				B27C2069288F441200D6C75F /* HTTPStatusCode.swift */,
 				B27C206B288F450600D6C75F /* HTTPParameters.swift */,
-				B27C206F288F49E200D6C75F /* EndpointType.swift */,
-				B27C2073288F615B00D6C75F /* APIClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
