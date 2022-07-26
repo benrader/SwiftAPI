@@ -55,7 +55,8 @@ public class APIClient {
     }
     
     private func buildRequest(_ endpoint: EndpointType) async -> URLRequest {
-        let url = self.baseURL.appendingPathComponent(endpoint.path)
+        var url = self.baseURL.appendingPathComponent(endpoint.path)
+        url = addURLParameters(url: url, parameters: endpoint.parameters)
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue.uppercased()
         
@@ -64,8 +65,29 @@ public class APIClient {
         for header in headers {
             request.setValue(header.value, forHTTPHeaderField: header.name)
         }
+        
         return request
     }
+    
+    private func addURLParameters(url: URL, parameters: HTTPParameters?) -> URL {
+        
+        guard let urlParameters = parameters else { return url }
+        
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return url }
+        var queryItems = [URLQueryItem]()
+        for (key, value) in urlParameters {
+            let item = URLQueryItem(name: key, value: String(describing: value).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))
+            queryItems.append(item)
+        }
+        queryItems.sort(by: { (item1, item2) -> Bool in
+            return (item1.name.localizedCaseInsensitiveCompare(item2.name) == .orderedAscending )
+        }
+        )
+        urlComponents.queryItems = queryItems
+        guard let updatedURL = urlComponents.url else { return url }
+        return updatedURL
+    }
+
 }
 
 extension APIClient {
