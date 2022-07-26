@@ -35,10 +35,10 @@ public class APIClient {
     }
     
     // MARK: Fetch
-    func fetch<T: Decodable>(_ model: T.Type, from endpoint: EndpointType) async throws -> T {
-        print("fetching")
+    func fetch<T: Decodable>(_ responseModel: T.Type, from endpoint: EndpointType) async throws -> T {
         
         let request = await buildRequest(endpoint)
+        
         let (data,response) = try await URLSession.shared.data(for: request)
         
         guard response is HTTPURLResponse else {
@@ -50,10 +50,8 @@ public class APIClient {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
             print("Decoding error")
-            throw FetchError.decodingError(modelType: "\(model)")
+            throw FetchError.decodingError(modelType: "\(responseModel)")
         }
-        
-        
     }
     
     private func buildRequest(_ endpoint: EndpointType) async -> URLRequest {
