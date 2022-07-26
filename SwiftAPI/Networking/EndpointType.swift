@@ -1,7 +1,6 @@
 import Foundation
 
 protocol EndpointType {
-//    var baseURL: URL { get }
     var path: String { get }
     var method: HTTPMethod { get }
     var parameters: HTTPParameters? { get }
