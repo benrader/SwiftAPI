@@ -3,16 +3,28 @@ import Foundation
 @MainActor
 class CompaniesViewModel: ObservableObject {
     @Published var companies: [Company] = []
+    @Published var airtableCompanies: [AirtableCompany] = []
     
     init() {
     }
     
-    func updateCompanies() async {
+    func updateTeamworkCompanies() async {
         let endpoint = Endpoint(path: "/companies.json", method: .get)
 
         do {
             let result = try await APIClient.Teamwork.fetch(CompaniesTeamworkResponse.self, from: endpoint)
             self.companies = result.companies
+        } catch {
+            print("?")
+        }
+    }
+    
+    func updateAirtableCompanies() async {
+        let endpoint = Endpoint(path: "/tbla4yMvaqe3td7Y7", method: .get)
+
+        do {
+            let result = try await APIClient.Airtable.fetch(CompaniesAirtableResponse.self, from: endpoint)
+            self.airtableCompanies = result.records
         } catch {
             print("?")
         }

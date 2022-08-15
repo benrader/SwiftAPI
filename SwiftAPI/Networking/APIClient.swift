@@ -10,8 +10,17 @@ public class APIClient {
                                     headers: [
                                         HTTPHeader.contentType(.json),
                                         HTTPHeader.accept(.json),
-                                        HTTPHeader.authorization(username: "SECRET_PASSWORD", password: "")
+                                        HTTPHeader.authorization(username: AppSecrets.teamworkApiKey, password: "")
                                     ]
+    )
+    
+    static let Airtable = APIClient(baseURL: URL(string: "https://api.airtable.com/v0/appOufdwHBM7mvOig")!,
+                                    headers: [
+                                        HTTPHeader.contentType(.json),
+                                        HTTPHeader.accept(.json),
+                                        HTTPHeader.authorization(bearerToken: AppSecrets.airtableApiKey)
+                                    ]
+    
     )
     
     init(baseURL: URL,
